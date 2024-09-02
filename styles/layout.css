@@ -45,3 +45,7 @@ aside {
         }
     }
 }
+
+form {
+    max-width: 33rem;
+}
