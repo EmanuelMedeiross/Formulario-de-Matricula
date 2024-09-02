@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrelas do amanhã</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -43,16 +46,18 @@
                     </div>
                     <div class="textarea-wrapper">
                         <label for="medical-info">Informações médicas</label>
-                        <textarea name="medical-info" id="medical-info" cols="30" rows="10" 
-                        placeholder="A criança possui alguma condição médica que a escola deve estar ciente? (Se sim, especifique)">
+                        <textarea name="medical-info" id="medical-info" cols="30" rows="5" placeholder="Ola">
                         </textarea>
                     </div>
                     <div class="droparea-wrapper">
-                        <input type="file" id="birth-file" name="birth-file">
-                        <img src="Assets/Icons/cloud-upload.svg" alt="">
-                        <p>Clique aqui para <br>
-                        selecionar arquivos
-                        </p>
+                        <label for="birth-file">Certidão de nascimento</label>
+                        <div class="dropzone">
+                            <input type="file" id="birth-file" name="birth-file">
+                            <img src="Assets/Icons/cloud-upload.svg" alt="">
+                            <p>Clique aqui para <br>
+                            selecionar arquivos
+                            </p>
+                        </div>
                     </div>
                 </fieldset>
             </form>
