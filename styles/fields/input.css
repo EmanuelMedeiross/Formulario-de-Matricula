@@ -98,4 +98,30 @@ input {/* Todo input que tenha o atributo "disabled" */
     border: 1px solid var(--stroke-default);
     color: var(--text-primary);
     }
+
+    &:invalid { /*! Se o campo estiver com o atributo required ele fica invalidado */
+        border: 0.125rem solid var(--semantic-error);
+    }
+
+    & + small { /*! Seleciona o small que é irmão de um input */
+        display: inline-block;
+        font: var(--text-sm);
+        color: #78716C;
+        margin-top: .25rem;
+    }
+
+    &[required] + .error {/*! Seleciona a classe "error" que é irmão do input que tem atributo "required"*/
+        display: flex;
+        text-align: center;
+        gap: .25rem;
+        font: var(--text-sm);
+        color: var(--semantic-error);
+        margin-top: .25rem;
+    }
+
+    /*! Não está em focu e verifique se está válido.*/
+    /*!Se o input não estiver em focu, e estiver válido, aplica a proprieda em "Error". a mensagem de erro aparecerá até sair do focu e estiver com e-mail válido. Caso não tenho e-mail válido, a mensagem continuará.*/
+    &:not(:focus):valid + .error { 
+        display: none;
+    }           
 }
