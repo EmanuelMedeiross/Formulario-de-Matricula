@@ -125,3 +125,49 @@ input {/* Todo input que tenha o atributo "disabled" */
         display: none;
     }           
 }
+
+.terms-wrapper {
+    margin-top: 3rem;
+    display: flex;
+    gap: .75rem;
+    align-items: flex-start;
+
+    strong {
+        font-weight: 500;
+        color: var(--text-highlight);
+    }
+
+    label {
+        text-align: justify;
+    }
+
+    &:hover label {
+        text-shadow: 2px 3px 5px #93AD96;
+    }
+}
+
+.checkbox-wrapper {
+    position: relative;
+
+    & [type="checkbox"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & .checkbox-image {
+        flex: 0 0   1.5rem;
+        height: 1.5rem;
+        background-image: url(../../Assets/Icons/checkbox-default.svg);
+        }
+    
+    &:hover, &:focus-within {
+        .checkbox-image {
+            background-image: url(../../Assets/Icons/checkbox-hover.svg);
+        }
+    }  
+    &:has(:checked) .checkbox-image {
+        background-image: url(../../Assets/Icons/checkbox-checked.svg);
+    }
+
+}
