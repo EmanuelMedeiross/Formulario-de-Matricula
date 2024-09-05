@@ -15,6 +15,11 @@ labeL {
     margin-bottom: .5rem;
 }
 
+textarea {
+    resize: vertical;
+    padding: .5rem;
+}
+
 input:focus, select:focus, textarea:focus,
 input[type="date"]:focus-within /**Pesquisa se alguma elemento dentro do input tipo data está em foco**/
 {
