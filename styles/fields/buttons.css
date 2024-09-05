@@ -1,0 +1,35 @@
+.action-wrapper {
+    all: unset;
+    display: flex;
+    justify-content: flex-end;    
+    gap: 1rem;
+    padding-top: 1rem;
+    margin-block: 3rem 4rem;
+
+    button {
+        font: 500 1rem/1.5 var(--font-family);
+        padding: .75rem 1.5rem;
+        border-radius: .5rem;
+        border: 1px solid var(--text-highlight);
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #E43A12;
+        color: #FFFFFF;
+
+        &:hover, &:focus-within {
+            background-color: #F3541C;
+        }
+    }
+
+    .btn-secondary {
+        color: var(--text-highlight);
+        &:hover, &:focus-within {
+            color: #E43A12;
+            outline: .25rem solid var(--surface-secondary);
+        }
+    }
+}
+
